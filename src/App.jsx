@@ -9,7 +9,7 @@ import {
 import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
 import Services from "./components/pages/Services/Services";
-import Careers from "./components/pages/Careers/Careers";
+// import Careers from "./components/pages/Careers/Careers";
 import Contact from "./components/pages/Contact/Contact";
 import ContactPage from "./components/pages/Contactpage/ContactPage";
 
@@ -32,7 +32,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/careers" element={<Careers />} />
+        {/* <Route path="/careers" element={<Careers />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/contactpage" element={<ContactPage />} />
         {/* Add more routes if needed */}

@@ -7,27 +7,45 @@ const Header = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      if (window.innerWidth > 768) {
+        setMobileMenuOpen(false);
+      }
+    };
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
 
+    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
     setActiveLink(location.pathname);
-    setMobileMenuOpen(false); // Close mobile menu on route change
-  }, [location]);
+    if (windowWidth <= 768) {
+      setMobileMenuOpen(false);
+    }
+  }, [location, windowWidth]);
 
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Careers", path: "/careers" },
-    { name: "Internships & Jobs", path: "https://upnext-hub.vercel.app" },
+    {
+      name: "Internships & Jobs",
+      path: "https://upnext-hub.vercel.app",
+      external: true,
+    },
     { name: "Contact", path: "/contactpage" },
   ];
 
@@ -57,12 +75,16 @@ const Header = () => {
   const mobileMenuVariants = {
     open: {
       opacity: 1,
-      y: 0,
-      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+      height: "auto",
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+        when: "beforeChildren",
+      },
     },
     closed: {
       opacity: 0,
-      y: -20,
+      height: 0,
       transition: {
         when: "afterChildren",
         staggerChildren: 0.05,
@@ -86,14 +108,16 @@ const Header = () => {
 
   return (
     <motion.header
-      className={`fixed w-full z-50 transition-all duration-300 bg-white shadow-sm`}
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md" : "bg-white/90 backdrop-blur-sm"
+      }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", damping: 10 }}
     >
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          {/* Logo with animation */}
+          {/* Logo */}
           <motion.div
             variants={logoVariants}
             initial="hidden"
@@ -106,7 +130,7 @@ const Header = () => {
                 <span className="text-white font-bold text-xl">UN</span>
               </div>
               <motion.span
-                className="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
+                className="text-xl sm:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
                 whileHover={{ scale: 1.05 }}
               >
                 UpNextHub
@@ -114,8 +138,8 @@ const Header = () => {
             </Link>
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center space-x-3 lg:space-x-6">
             {navLinks.map((link, i) => (
               <motion.div
                 key={link.path}
@@ -125,57 +149,63 @@ const Header = () => {
                 custom={i}
                 whileHover={hoverEffect}
               >
-                <Link
-                  to={link.path}
-                  className={`relative px-3 py-2 text-sm font-medium transition-colors ${
-                    activeLink === link.path
-                      ? "text-purple-600 font-semibold"
-                      : "text-gray-600 hover:text-blue-600"
-                  }`}
-                >
-                  {link.name}
-                  {activeLink === link.path && (
-                    <motion.span
-                      layoutId="activeLink"
-                      className="absolute left-3 right-3 bottom-0 h-0.5 bg-purple-600"
-                      transition={{
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 30,
-                      }}
-                    />
-                  )}
-                </Link>
+                {link.external ? (
+                  <a
+                    href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`relative px-2 sm:px-3 py-2 text-sm sm:text-base font-medium transition-colors ${
+                      activeLink === link.path
+                        ? "text-purple-600 font-semibold"
+                        : "text-gray-600 hover:text-blue-600"
+                    }`}
+                  >
+                    {link.name}
+                    {activeLink === link.path && (
+                      <motion.span
+                        layoutId="activeLink"
+                        className="absolute left-3 right-3 bottom-0 h-0.5 bg-purple-600"
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className={`relative px-2 sm:px-3 py-2 text-sm sm:text-base font-medium transition-colors ${
+                      activeLink === link.path
+                        ? "text-purple-600 font-semibold"
+                        : "text-gray-600 hover:text-blue-600"
+                    }`}
+                  >
+                    {link.name}
+                    {activeLink === link.path && (
+                      <motion.span
+                        layoutId="activeLink"
+                        className="absolute left-3 right-3 bottom-0 h-0.5 bg-purple-600"
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                  </Link>
+                )}
               </motion.div>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <motion.div
-            variants={navItemVariants}
-            initial="hidden"
-            animate="visible"
-            custom={navLinks.length}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 5px 15px rgba(124, 58, 237, 0.3)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="hidden md:block"
-          >
-            {/* <Link
-              to="/contact"
-              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium text-sm shadow-md hover:shadow-lg transition-all"
-            >
-              Get Started
-            </Link> */}
-          </motion.div>
-
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <motion.button
-            className="md:hidden text-gray-600 focus:outline-none"
+            className="md:hidden p-2 text-gray-600 focus:outline-none"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             whileTap={{ scale: 0.95 }}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
               <svg
@@ -211,34 +241,41 @@ const Header = () => {
 
         {/* Mobile Menu */}
         <motion.div
-          className={`md:hidden ${mobileMenuOpen ? "block" : "hidden"}`}
+          className="md:hidden overflow-hidden"
           initial="closed"
           animate={mobileMenuOpen ? "open" : "closed"}
           variants={mobileMenuVariants}
         >
-          <div className="pt-2 pb-4 space-y-2">
+          <div className="pt-2 pb-4 space-y-1">
             {navLinks.map((link) => (
               <motion.div key={link.path} variants={mobileItemVariants}>
-                <Link
-                  to={link.path}
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${
-                    activeLink === link.path
-                      ? "bg-purple-50 text-purple-600"
-                      : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                  }`}
-                >
-                  {link.name}
-                </Link>
+                {link.external ? (
+                  <a
+                    href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block w-full px-4 py-3 rounded-md text-base font-medium ${
+                      activeLink === link.path
+                        ? "bg-purple-50 text-purple-600"
+                        : "text-gray-600 hover:bg-gray-100 hover:text-blue-600"
+                    }`}
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className={`block w-full px-4 py-3 rounded-md text-base font-medium ${
+                      activeLink === link.path
+                        ? "bg-purple-50 text-purple-600"
+                        : "text-gray-600 hover:bg-gray-100 hover:text-blue-600"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                )}
               </motion.div>
             ))}
-            <motion.div variants={mobileItemVariants} className="pt-2">
-              <Link
-                to="/contact"
-                className="block w-full px-4 py-2.5 text-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium text-sm shadow-md"
-              >
-                Get Started
-              </Link>
-            </motion.div>
           </div>
         </motion.div>
       </div>

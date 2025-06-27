@@ -17,6 +17,7 @@ import teamMembers from "./teamData";
 import Header from "../../common/Header/Header";
 import Footer from "../../common/Footer/Footer";
 import Contact from "../Contact/Contact";
+import { Link } from "react-router-dom";
 
 const About = () => {
   // Company milestones timeline
@@ -195,7 +196,7 @@ const About = () => {
                 className="text-xl md:text-2xl max-w-3xl mx-auto mb-10"
                 variants={itemVariants}
               >
-                Pioneering digital transformation since 2020 with innovative
+                Pioneering digital transformation since 2023 with innovative
                 solutions
               </motion.p>
               <motion.div
@@ -204,9 +205,11 @@ const About = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-block"
               >
-                <button className="px-8 py-3 bg-yellow-400 text-gray-900 font-bold rounded-full shadow-lg hover:shadow-xl transition-all">
-                  Explore Our Work
-                </button>
+                <Link to="/services">
+                  <button className="px-8 py-3 bg-yellow-400 text-gray-900 font-bold rounded-full shadow-lg hover:shadow-xl transition-all">
+                    Explore Our Work
+                  </button>
+                </Link>
               </motion.div>
             </motion.div>
           </div>
@@ -255,7 +258,7 @@ const About = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2, duration: 0.8 }}
                 >
-                  Founded in 2020, UpNextHub began as a small team of passionate
+                  Founded in 2023, UpNextHub began as a small team of passionate
                   developers with a vision to create web applications that truly
                   make a difference. What started as a garage operation has now
                   grown into a full-service digital agency serving clients
@@ -273,17 +276,6 @@ const About = () => {
                   devices. Our mission is to bridge the gap between innovative
                   ideas and technological execution through cutting-edge
                   solutions.
-                </motion.p>
-                <motion.p
-                  className="text-lg text-gray-600"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.6, duration: 0.8 }}
-                >
-                  Today, we're proud to be a trusted partner for startups and
-                  Fortune 500 companies alike, delivering award-winning digital
-                  experiences that drive real business results.
                 </motion.p>
               </div>
               <motion.div
@@ -674,14 +666,13 @@ const About = () => {
                   solutions that drove a 150% increase in user engagement."
                 </p>
                 <div className="flex items-center">
-                  <img
+                  {/* <img
                     src="https://randomuser.me/api/portraits/women/44.jpg"
-                    alt="Sarah Johnson"
+                    alt=""
                     className="w-12 h-12 rounded-full mr-4"
-                  />
+                  /> */}
                   <div>
-                    <h4 className="font-bold text-gray-800">Sarah Johnson</h4>
-                    <p className="text-gray-500">CEO, TechSolutions Inc.</p>
+                    <h4 className="font-bold text-gray-800">Sonali Sharma</h4>
                   </div>
                 </div>
               </motion.div>
@@ -703,14 +694,13 @@ const About = () => {
                   experience design is unparalleled in the industry."
                 </p>
                 <div className="flex items-center">
-                  <img
+                  {/* <img
                     src="https://randomuser.me/api/portraits/men/32.jpg"
                     alt="Michael Chen"
                     className="w-12 h-12 rounded-full mr-4"
-                  />
+                  /> */}
                   <div>
-                    <h4 className="font-bold text-gray-800">Michael Chen</h4>
-                    <p className="text-gray-500">CTO, Global Retail Group</p>
+                    <h4 className="font-bold text-gray-800">Rahul Meshram</h4>
                   </div>
                 </div>
               </motion.div>
@@ -732,16 +722,13 @@ const About = () => {
                   our growth journey, offering strategic technical advice."
                 </p>
                 <div className="flex items-center">
-                  <img
+                  {/* <img
                     src="https://randomuser.me/api/portraits/women/68.jpg"
                     alt="Emma Rodriguez"
                     className="w-12 h-12 rounded-full mr-4"
-                  />
+                  /> */}
                   <div>
-                    <h4 className="font-bold text-gray-800">Emma Rodriguez</h4>
-                    <p className="text-gray-500">
-                      Founder, GreenTech Innovations
-                    </p>
+                    <h4 className="font-bold text-gray-800">Prit thakre</h4>
                   </div>
                 </div>
               </motion.div>
@@ -766,26 +753,31 @@ const About = () => {
                 with our expert team and proven methodologies.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 5px 20px rgba(0,0,0,0.2)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-white text-blue-600 font-bold rounded-full shadow-lg"
-                >
-                  Get in Touch
-                </motion.button>
-                <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 5px 20px rgba(0,0,0,0.2)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-transparent border-2 border-white font-bold rounded-full shadow-lg"
-                >
-                  View Case Studies
-                </motion.button>
+                <Link to="/contactpage">
+                  {" "}
+                  <motion.button
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 5px 20px rgba(0,0,0,0.2)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 bg-white text-blue-600 font-bold rounded-full shadow-lg"
+                  >
+                    Get in Touch
+                  </motion.button>
+                </Link>
+                <Link to="/services">
+                  <motion.button
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 5px 20px rgba(0,0,0,0.2)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 bg-transparent border-2 border-white font-bold rounded-full shadow-lg"
+                  >
+                    View Case Studies
+                  </motion.button>
+                </Link>
               </div>
             </motion.div>
           </div>

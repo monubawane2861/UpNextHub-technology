@@ -21,26 +21,26 @@ const Footer = () => {
       title: "Company",
       links: [
         { name: "About Us", path: "/about" },
-        { name: "Careers", path: "/careers" },
-        { name: "Blog", path: "/blog" },
-        { name: "Press", path: "/press" },
+        { name: "Intership & jobs", path: "https://upnext-hub.vercel.app" },
+        { name: "Services", path: "/services" },
+        { name: "Contact", path: "/contactpage" },
       ],
     },
     {
       title: "Resources",
       links: [
-        { name: "Help Center", path: "/help" },
-        { name: "Tutorials", path: "/tutorials" },
-        { name: "Webinars", path: "/webinars" },
-        { name: "Community", path: "/community" },
+        { name: "Help Center" },
+        { name: "Tutorials" },
+        { name: "Webinars" },
+        { name: "Community" },
       ],
     },
     {
       title: "Legal",
       links: [
-        { name: "Privacy Policy", path: "/privacy" },
-        { name: "Terms of Service", path: "/terms" },
-        { name: "Cookie Policy", path: "/cookies" },
+        { name: "Privacy Policy" },
+        { name: "Terms of Service" },
+        { name: "Cookie Policy" },
       ],
     },
   ];
@@ -155,7 +155,7 @@ const Footer = () => {
                     href="mailto:info@upnexthub.com"
                     className="text-white hover:text-blue-400 transition-colors"
                   >
-                    info@upnexthub.com
+                    upnexthubtech@gmail.com
                   </a>
                 </div>
               </div>
@@ -170,7 +170,20 @@ const Footer = () => {
                     href="tel:+11234567890"
                     className="text-white hover:text-purple-400 transition-colors"
                   >
-                    +1 (123) 456-7890
+                    +91 99226 70821 <br></br>
+                  </a>
+                  <a
+                    href="tel:+11234567890"
+                    className="text-white hover:text-purple-400 transition-colors"
+                  >
+                    +91 99235 24832
+                  </a>
+                  <br></br>
+                  <a
+                    href="tel:+11234567890"
+                    className="text-white hover:text-purple-400 transition-colors"
+                  >
+                    +91 92264 09449
                   </a>
                 </div>
               </div>
@@ -196,7 +209,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            &copy; {currentYear} UpNextHub. All rights reserved.
+            &copy; 2023 UpNextHub. All rights reserved.
           </motion.p>
 
           <div className="flex space-x-6">

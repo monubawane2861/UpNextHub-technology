@@ -162,96 +162,13 @@ const Home = () => {
             className="relative z-10 text-center px-4"
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Your Business
+              Transform Your Business Digital
             </h2>
             <p className="text-xl text-gray-200 max-w-2xl mx-auto">
               Join thousands of companies revolutionizing their industry with
               our platform
             </p>
           </motion.div>
-        </section>
-
-        {/* Developer Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Meet the Developer
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                The creative mind behind this digital experience
-              </p>
-            </motion.div>
-
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="flex-shrink-0"
-              >
-                <div className="w-64 h-64 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
-                  <div className="bg-white w-full h-full rounded-full p-2">
-                    <div className="bg-gray-100 w-full h-full rounded-full flex items-center justify-center text-8xl">
-                      👨‍💻
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="max-w-2xl"
-              >
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  Alex Johnson
-                </h3>
-                <p className="text-xl text-purple-600 font-medium mb-6">
-                  Senior Full Stack Developer & UI/UX Designer
-                </p>
-                <p className="text-gray-600 mb-4">
-                  With over 8 years of experience in web development, I
-                  specialize in creating responsive, performant, and visually
-                  stunning digital experiences. My passion lies in blending
-                  beautiful design with robust functionality.
-                </p>
-                <p className="text-gray-600 mb-6">
-                  This website was crafted using cutting-edge technologies
-                  including React, Tailwind CSS, and Framer Motion to deliver
-                  smooth animations and interactions that enhance user
-                  engagement.
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    "React",
-                    "JavaScript",
-                    "Node.js",
-                    "Tailwind",
-                    "Framer Motion",
-                    "UI/UX",
-                  ].map((skill, index) => (
-                    <motion.span
-                      key={index}
-                      whileHover={{ scale: 1.05 }}
-                      className="px-4 py-2 bg-white rounded-full text-sm font-medium shadow-sm border border-gray-200"
-                    >
-                      {skill}
-                    </motion.span>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-          </div>
         </section>
 
         {/* Testimonials Section */}
@@ -276,24 +193,24 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  name: "Sarah Johnson",
-                  role: "CEO, TechCorp",
+                  id: 1,
+                  name: "Paras Factor",
                   quote:
-                    "This platform transformed our operations. Our productivity increased by 200% in just 3 months!",
-                  avatar: "👩‍💼",
-                },
-                {
-                  name: "Michael Chen",
-                  role: "CTO, InnovateX",
-                  quote:
-                    "The best decision we made was switching to this solution. The support team is exceptional.",
+                    "This platform transformed our operations. Our productivity increased by 100% in just 3 months! We used it to create a modern and fully responsive portfolio website that impressed our clients. We eventually wrapped the project after achieving our design goals.",
                   avatar: "👨‍💻",
                 },
                 {
-                  name: "Emma Rodriguez",
-                  role: "Marketing Director, BrandUp",
+                  id: 2,
+                  name: "Mayuri Mehta",
                   quote:
-                    "We've seen a 150% ROI since implementing their tools. Absolutely game-changing.",
+                    "The best decision we made was switching to this solution. The support team is exceptional. We used it for building our online sales product showcase and it helped us reach more customers effectively.",
+                  avatar: "👩‍💼",
+                },
+                {
+                  id: 3,
+                  name: "Aishwarya Suryawanshi",
+                  quote:
+                    "We've seen a 150% ROI since implementing their tools. Absolutely game-changing. We developed an engaging educational website using their service, which now supports hundreds of learners daily.",
                   avatar: "👩‍🎨",
                 },
               ].map((testimonial, index) => (
@@ -326,10 +243,10 @@ const Home = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
-                { number: "10K+", label: "Happy Customers" },
+                { number: "70K+", label: "Happy Customers" },
                 { number: "95%", label: "Retention Rate" },
                 { number: "24/7", label: "Support Available" },
-                { number: "5", label: "Global Offices" },
+                { number: "1", label: "Global Offices" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -366,20 +283,24 @@ const Home = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 bg-white text-purple-600 rounded-full font-bold hover:bg-gray-100 transition-all duration-300"
-                  >
-                    Get Started Free
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-purple-600 transition-all duration-300"
-                  >
-                    Schedule Demo
-                  </motion.button>
+                  <Link to="/contactpage">
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-8 py-4 bg-white text-purple-600 rounded-full font-bold hover:bg-gray-100 transition-all duration-300"
+                    >
+                      Get Started Free
+                    </motion.button>
+                  </Link>
+                  <Link to="/about">
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-purple-600 transition-all duration-300"
+                    >
+                      Schedule Demo
+                    </motion.button>
+                  </Link>
                 </div>
               </motion.div>
             </div>
