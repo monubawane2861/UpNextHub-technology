@@ -221,19 +221,6 @@ const ContactPage = () => {
                       <div className="text-red-500 text-sm">{error}</div>
                     )}
 
-                    <button
-                      type="submit"
-                      disabled={isLoading}
-                      className={clsx(
-                        "w-full py-3 px-4 rounded-lg font-medium text-white flex justify-center",
-                        isLoading
-                          ? "bg-blue-400"
-                          : "bg-blue-600 hover:bg-blue-700"
-                      )}
-                    >
-                      {isLoading ? "Sending..." : "Send Message"}
-                    </button>
-
                     {/* WhatsApp & Email Quick Buttons */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <button
