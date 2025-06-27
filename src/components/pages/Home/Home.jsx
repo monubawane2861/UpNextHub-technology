@@ -243,7 +243,7 @@ const Home = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
-                { number: "70K+", label: "Happy Customers" },
+                { number: "70+", label: "Happy Customers" },
                 { number: "95%", label: "Retention Rate" },
                 { number: "24/7", label: "Support Available" },
                 { number: "1", label: "Global Offices" },

@@ -148,7 +148,7 @@ const Services = () => {
                 transition={{ duration: 0.5 }}
                 className={`absolute inset-0 bg-gradient-to-br ${services[activeTab].color} rounded-3xl shadow-xl p-8 flex flex-col md:flex-row items-center`}
               >
-                <div className="md:w-1/2 mb-8 md:mb-0">
+                <div className="md:w-1/2 mb-12 md:mb-0">
                   <motion.div
                     animate={{
                       rotate: [0, 10, -10, 0],
@@ -181,7 +181,7 @@ const Services = () => {
                         initial={{ x: 100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: 0.1 * idx }}
-                        className="flex items-center bg-white bg-opacity-20 p-4 rounded-xl backdrop-blur-sm text-black"
+                        className="hidden md:flex items-center bg-white bg-opacity-20 p-4 rounded-xl backdrop-blur-sm text-black"
                       >
                         <span className="mr-3 text-2xl">✓</span>
                         <span className="text-lg">{feature}</span>
@@ -202,7 +202,7 @@ const Services = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
           >
             {[
-              { value: "200+", label: "Projects Completed" },
+              { value: "70+", label: "Projects Completed" },
               { value: "98%", label: "Client Satisfaction" },
               { value: "24/7", label: "Support Available" },
               { value: "5+", label: "Years Experience" },
@@ -238,20 +238,17 @@ const Services = () => {
                 {
                   quote:
                     "Their web development team delivered beyond our expectations. The site performance is incredible!",
-                  author: "Sarah Johnson",
-                  role: "CEO, TechStart Inc.",
+                  author: "Paras Factor",
                 },
                 {
                   quote:
-                    "The mobile app they built for us has significantly increased our customer engagement.",
-                  author: "Michael Chen",
-                  role: "Product Manager, RetailGo",
+                    "The best decision we made was switching to this solution. The support team is exceptional. We used it for building our online sales product showcase and it helped us reach more customers effectively.",
+                  author: "Mayuri Mehta",
                 },
                 {
                   quote:
-                    "Excellent UI/UX design work that perfectly captured our brand identity.",
-                  author: "Emma Rodriguez",
-                  role: "Marketing Director, StyleHub",
+                    "We've seen a 150% ROI since implementing their tools. Absolutely game-changing. We developed an engaging educational website using their service, which now supports hundreds of learners daily.",
+                  author: "Aishwarya Suryawanshi",
                 },
               ].map((testimonial, index) => (
                 <motion.div

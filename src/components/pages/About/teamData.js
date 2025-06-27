@@ -7,7 +7,7 @@ const teamMembers = [
     id: 1,
     name: "Akash Gaydhane",
     role: "Founder & CEO ,Developer",
-    bio: "Tech visionary with 2+ years experience in web development and digital transformation",
+    bio: "Tech visionary with a proven track record in web development and driving digital transformatio",
     image: Image1, // Directly use the imported image
     social: {
       linkedin: "https://linkedin.com/in/rahul-upnexthub",

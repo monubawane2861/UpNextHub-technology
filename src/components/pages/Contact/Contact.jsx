@@ -7,7 +7,7 @@ import { BsFillChatRightDotsFill } from "react-icons/bs"; // Chat Icon
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isChatButtonPulsing, setIsChatButtonPulsing] = useState(false);
-  const phoneNumber = "+918087727262";
+  const phoneNumber = "+919922670821";
   const message = "Hello! I have a question.";
   const pulseIntervalRef = useRef(null);
 
