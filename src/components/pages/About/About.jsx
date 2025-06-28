@@ -190,7 +190,7 @@ const About = () => {
                 className="text-4xl md:text-6xl font-bold mb-6"
                 variants={itemVariants}
               >
-                About{" "}
+                About {/* about */}
                 <span className="text-yellow-300">UpNextHub Technology</span>
               </motion.h1>
               <motion.p
