@@ -190,7 +190,8 @@ const About = () => {
                 className="text-4xl md:text-6xl font-bold mb-6"
                 variants={itemVariants}
               >
-                About <span className="text-yellow-300">UpNextHub</span>
+                About{" "}
+                <span className="text-yellow-300">UpNextHub Technology</span>
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl max-w-3xl mx-auto mb-10"
@@ -572,7 +573,7 @@ const About = () => {
                 Meet Our Team
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                The passionate people behind UpNextHub's success
+                The passionate people behind UpNextHub Technology's success
               </p>
             </motion.div>
 
@@ -661,9 +662,10 @@ const About = () => {
                   <div className="text-yellow-400 text-2xl">★★★★★</div>
                 </div>
                 <p className="text-gray-600 mb-6">
-                  "UpNextHub transformed our digital presence completely. Their
-                  team delivered beyond our expectations with innovative
-                  solutions that drove a 150% increase in user engagement."
+                  "UpNextHub Technology transformed our digital presence
+                  completely. Their team delivered beyond our expectations with
+                  innovative solutions that drove a 150% increase in user
+                  engagement."
                 </p>
                 <div className="flex items-center">
                   {/* <img
@@ -717,9 +719,10 @@ const About = () => {
                   <div className="text-yellow-400 text-2xl">★★★★★</div>
                 </div>
                 <p className="text-gray-600 mb-6">
-                  "Working with UpNextHub was a game-changer for our startup.
-                  They not only built our platform but became true partners in
-                  our growth journey, offering strategic technical advice."
+                  "Working with UpNextHub Technology was a game-changer for our
+                  startup. They not only built our platform but became true
+                  partners in our growth journey, offering strategic technical
+                  advice."
                 </p>
                 <div className="flex items-center">
                   {/* <img

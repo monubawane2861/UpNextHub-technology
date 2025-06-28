@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { FiArrowUp } from "react-icons/fi"; // Up arrow icon
+import { ChevronLeft } from "lucide-react";
+import { Slash } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -127,17 +129,30 @@ const Header = () => {
             className="flex items-center"
           >
             <Link to="/" className="flex items-center">
-              {/* Icon Box */}
-              <div className="w-10 h-10 bg-blue-500 rounded-md flex items-center justify-center mr-3 shadow-md">
-                <FiArrowUp className="text-white text-2xl" />
+              {/* Icon Box with darker background */}
+              <div className="w-12 h-12  rounded-lg flex items-center justify-center mr-3 ">
+                <div className="flex items-center space-x-1 ">
+                  <div className="flex items-center">
+                    <ChevronLeft
+                      className="text-blue-700 w-6 h-8"
+                      strokeWidth={3}
+                    />
+                    <Slash className="text-blue-700 w-6 h-8" strokeWidth={3} />
+                    <ChevronRight
+                      className="text-blue-700 w-6 h-8"
+                      strokeWidth={3}
+                    />
+                  </div>
+                </div>
               </div>
 
               {/* Brand Name with Hover Animation */}
               <motion.span
-                className="text-xl sm:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
+                className="text-xl sm:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600"
                 whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                UpNextHub
+                UpnextHub
               </motion.span>
             </Link>
           </motion.div>
