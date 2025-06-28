@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { FiArrowUp } from "react-icons/fi"; // Up arrow icon
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -126,9 +127,12 @@ const Header = () => {
             className="flex items-center"
           >
             <Link to="/" className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3 shadow-md">
-                <span className="text-white font-bold text-xl">UN</span>
+              {/* Icon Box */}
+              <div className="w-10 h-10 bg-blue-500 rounded-md flex items-center justify-center mr-3 shadow-md">
+                <FiArrowUp className="text-white text-2xl" />
               </div>
+
+              {/* Brand Name with Hover Animation */}
               <motion.span
                 className="text-xl sm:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
                 whileHover={{ scale: 1.05 }}
