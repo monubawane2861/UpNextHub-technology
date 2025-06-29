@@ -18,7 +18,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Tushar Maske ",
-    role: "Manager & Sales executive ,  Developer",
+    role: "CO Founder ,  Developer",
     bio: "Full-stack expert specializing in scalable architecture and cloud solutions",
     image: Image2, // Directly use the imported image
     social: {
