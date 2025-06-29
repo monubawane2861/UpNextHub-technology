@@ -20,7 +20,7 @@ const Services = () => {
     {
       title: "Web Development",
       description:
-        "Custom, responsive websites built with modern technologies to ensure performance and scalability.",
+        "We build responsive websites optimized for speed and scalability.",
       icon: "💻",
       features: [
         "React/Next.js",
