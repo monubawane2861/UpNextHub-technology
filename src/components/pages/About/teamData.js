@@ -18,7 +18,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Tushar Maske ",
-    role: "CO Founder ,  Developer",
+    role: "CO Founder , Developer",
     bio: "Full-stack expert specializing in scalable architecture and cloud solutions",
     image: Image2, // Directly use the imported image
     social: {
@@ -30,7 +30,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Monali Bawane",
-    role: "CO founder & Developer",
+    role: "CO founder, UI/UX Designer, Developer",
     bio: "UI/UX specialist focused on creating intuitive user experiences",
     image: Image3, // Directly use the imported image
     social: {
