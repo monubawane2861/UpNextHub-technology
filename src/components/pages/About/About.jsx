@@ -88,7 +88,7 @@ const About = () => {
     {
       title: "Mobile Applications",
       description:
-        "Cross-platform mobile apps using React Native and Flutter that deliver native-like experiences.",
+        "Build fast, cross-platform mobile apps with native-like performance.",
       icon: <FaMobileAlt size={32} className="text-purple-500" />,
     },
     {
