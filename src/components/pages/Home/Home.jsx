@@ -129,6 +129,25 @@ const Home = () => {
                     "Enterprise-grade security for your peace of mind",
                   icon: "🔒",
                 },
+                {
+                  title: "Digital Marketing",
+                  description:
+                    "Promote your brand on platforms like Instagram and Facebook.",
+                  icon: "📈",
+                },
+
+                {
+                  title: "Social Media Marketing",
+                  description:
+                    "Promote your brand on platforms like Instagram and Facebook.",
+                  icon: "📱",
+                },
+                {
+                  title: "SEO Optimization",
+                  description:
+                    "Boost your website visibility on search engines like Google.",
+                  icon: "🔍",
+                },
               ].map((feature, index) => (
                 <motion.div
                   key={index}
