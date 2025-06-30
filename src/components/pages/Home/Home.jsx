@@ -4,6 +4,7 @@ import Header from "../../common/Header/Header";
 import Footer from "../../common/Footer/Footer";
 import Contact from "../Contact/Contact";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const ref = useRef(null);
@@ -17,6 +18,25 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="UpNextHub offers professional web development, mobile apps, and digital marketing services to transform your business."
+        />
+        <meta
+          name="keywords"
+          content="web development, mobile apps, digital marketing, SEO, social media marketing"
+        />
+        <meta
+          property="og:title"
+          content="UpNextHub Technology | Digital Solutions Provider"
+        />
+        <meta
+          property="og:description"
+          content="Professional digital solutions including web development, mobile apps, and marketing services."
+        />
+      </Helmet>
+
       <Header />
       <Contact />
       <div className="scroll-smooth">
@@ -25,60 +45,43 @@ const Home = () => {
           <motion.div
             style={{ y: backgroundY }}
             className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20"
+            aria-hidden="true"
           />
 
           <div className="relative z-10 text-center px-4">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold text-white mb-6"
-            >
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Welcome to{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                Our World
+                UpNextHub Technology
               </span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-8"
-            >
-              Discover amazing experiences that will transform your digital
-              journey
-            </motion.p>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-8">
+              Professional web and mobile app development services with
+              comprehensive digital marketing solutions
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex gap-4 justify-center"
-            >
-              <Link to="/contactpage">
+            <div className="flex gap-4 justify-center">
+              <Link to="/contact" aria-label="Contact UpNextHub">
                 <button className="px-8 py-3 bg-white text-indigo-900 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
               </Link>
-              <Link to="/about">
+              <Link to="/about" aria-label="Learn about UpNextHub">
                 <button className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-indigo-900 transition-all duration-300 transform hover:scale-105">
                   Learn More
                 </button>
               </Link>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            animate={{ y: [0, 15, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          >
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
             <svg
               className="w-10 h-10 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -87,198 +90,170 @@ const Home = () => {
                 d="M19 14l-7 7m0 0l-7-7m7 7V3"
               />
             </svg>
-          </motion.div>
+          </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Amazing Features
+                Our Digital Solutions
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Explore our cutting-edge solutions designed to empower your
-                business
+                Comprehensive services to establish and grow your online
+                presence
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "AI Powered",
+                  title: "Web Development",
                   description:
-                    "Leverage artificial intelligence to automate your workflows",
-                  icon: "🤖",
+                    "Custom websites and web applications built with modern technologies",
+                  icon: "🌐",
                 },
                 {
-                  title: "Real-time Analytics",
+                  title: "Mobile Applications",
                   description:
-                    "Get instant insights with our powerful analytics dashboard",
-                  icon: "📊",
-                },
-                {
-                  title: "Secure Cloud",
-                  description:
-                    "Enterprise-grade security for your peace of mind",
-                  icon: "🔒",
+                    "iOS and Android apps to engage your customers on any device",
+                  icon: "📱",
                 },
                 {
                   title: "Digital Marketing",
                   description:
-                    "Promote your brand on platforms like Instagram and Facebook.",
+                    "Strategies to increase your online visibility and conversions",
                   icon: "📈",
                 },
-
+                {
+                  title: "SEO Services",
+                  description:
+                    "Optimize your website to rank higher on search engines",
+                  icon: "🔍",
+                },
                 {
                   title: "Social Media Marketing",
                   description:
-                    "Promote your brand on platforms like Instagram and Facebook.",
-                  icon: "📱",
+                    "Professional management of your social media presence",
+                  icon: "💬",
                 },
                 {
-                  title: "SEO Optimization",
+                  title: "Cloud Solutions",
                   description:
-                    "Boost your website visibility on search engines like Google.",
-                  icon: "🔍",
+                    "Secure and scalable hosting for your digital assets",
+                  icon: "☁️",
                 },
               ].map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
                   className="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300"
+                  itemScope
+                  itemType="https://schema.org/Service"
                 >
-                  <div className="text-5xl mb-6">{feature.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <div className="text-5xl mb-6" aria-hidden="true">
+                    {feature.icon}
+                  </div>
+                  <h3
+                    className="text-2xl font-bold text-gray-900 mb-3"
+                    itemProp="name"
+                  >
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
+                  <p className="text-gray-600" itemProp="description">
+                    {feature.description}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
-        </section>
-
-        {/* Parallax Section */}
-        <section className="relative h-[60vh] overflow-hidden flex items-center justify-center">
-          <motion.div
-            style={{ y: backgroundY }}
-            className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center"
-          />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-
-          <motion.div
-            style={{ y: textY }}
-            className="relative z-10 text-center px-4"
-          >
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Your Business Digital
-            </h2>
-            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-              Join thousands of companies revolutionizing their industry with
-              our platform
-            </p>
-          </motion.div>
         </section>
 
         {/* Testimonials Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                What Our Clients Say
+                Client Success Stories
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Don't just take our word for it - hear from our satisfied
-                customers
+                Results-driven solutions that deliver measurable impact
               </p>
-            </motion.div>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
                   id: 1,
                   name: "Paras Factor",
                   quote:
-                    "This platform transformed our operations. Our productivity increased by 100% in just 3 months! We used it to create a modern and fully responsive portfolio website that impressed our clients. We eventually wrapped the project after achieving our design goals.",
-                  avatar: "👨‍💻",
+                    "UpNextHub transformed our online presence with a modern, responsive website that increased our leads by 150%.",
+                  role: "CEO, Factor Enterprises",
                 },
                 {
                   id: 2,
                   name: "Mayuri Mehta",
                   quote:
-                    "The best decision we made was switching to this solution. The support team is exceptional. We used it for building our online sales product showcase and it helped us reach more customers effectively.",
-                  avatar: "👩‍💼",
+                    "Their SEO strategy took us from page 3 to the top of Google search results in just 3 months.",
+                  role: "Marketing Director, Mehta Solutions",
                 },
                 {
                   id: 3,
                   name: "Aishwarya Suryawanshi",
                   quote:
-                    "We've seen a 150% ROI since implementing their tools. Absolutely game-changing. We developed an engaging educational website using their service, which now supports hundreds of learners daily.",
-                  avatar: "👩‍🎨",
+                    "The mobile app they developed has increased our customer engagement by 200% year-over-year.",
+                  role: "Product Manager, Surya Tech",
                 },
-              ].map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+              ].map((testimonial) => (
+                <div
+                  key={testimonial.id}
                   className="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                  itemScope
+                  itemType="https://schema.org/Review"
                 >
-                  <div className="text-4xl mb-4">{testimonial.avatar}</div>
-                  <p className="text-gray-600 italic mb-6">
+                  <div className="text-4xl mb-4" aria-hidden="true">
+                    ⭐️⭐️⭐️⭐️⭐️
+                  </div>
+                  <p
+                    className="text-gray-600 italic mb-6"
+                    itemProp="reviewBody"
+                  >
                     "{testimonial.quote}"
                   </p>
-                  <div>
-                    <h4 className="font-bold text-gray-900">
+                  <div
+                    itemScope
+                    itemType="https://schema.org/Person"
+                    itemProp="author"
+                  >
+                    <h4 className="font-bold text-gray-900" itemProp="name">
                       {testimonial.name}
                     </h4>
-                    <p className="text-gray-500">{testimonial.role}</p>
+                    <p className="text-gray-500" itemProp="jobTitle">
+                      {testimonial.role}
+                    </p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
         </section>
-        {/* okkkkkkkkkkkkk */}
+
         {/* Stats Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
-                { number: "70+", label: "Happy Customers" },
-                { number: "95%", label: "Retention Rate" },
+                { number: "100+", label: "Projects Completed" },
+                { number: "95%", label: "Client Retention" },
                 { number: "24/7", label: "Support Available" },
-                { number: "1", label: "Global Offices" },
+                { number: "50+", label: "Satisfied Clients" },
               ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
+                <div key={index}>
                   <div className="text-4xl md:text-5xl font-bold mb-2">
                     {stat.number}
                   </div>
                   <div className="text-lg opacity-90">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -288,40 +263,25 @@ const Home = () => {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl p-8 md:p-12 text-center text-white shadow-xl">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              >
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Ready to Transform Your Business?
-                </h2>
-                <p className="text-xl mb-8 opacity-90">
-                  Join thousands of businesses already growing with our platform
-                </p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl mb-8 opacity-90">
+                Get started with our professional digital solutions today
+              </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/contactpage">
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="px-8 py-4 bg-white text-purple-600 rounded-full font-bold hover:bg-gray-100 transition-all duration-300"
-                    >
-                      Get Started Free
-                    </motion.button>
-                  </Link>
-                  <Link to="/about">
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-purple-600 transition-all duration-300"
-                    >
-                      Schedule Demo
-                    </motion.button>
-                  </Link>
-                </div>
-              </motion.div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/contact" aria-label="Contact UpNextHub">
+                  <button className="px-8 py-4 bg-white text-purple-600 rounded-full font-bold hover:bg-gray-100 transition-all duration-300">
+                    Get Started Free
+                  </button>
+                </Link>
+                <Link to="/about" aria-label="Learn about UpNextHub services">
+                  <button className="px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                    Schedule Demo
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
