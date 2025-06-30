@@ -52,7 +52,7 @@ const Home = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Welcome to{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                UpNextHub Technology
+                Upnexthub Technology
               </span>
             </h1>
 
