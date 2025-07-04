@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft } from "lucide-react";
 import { Slash } from "lucide-react";
 import { ChevronRight } from "lucide-react";
+import Image from "../../../assets/image/logo.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -133,14 +134,11 @@ const Header = () => {
               <div className="w-12 h-12  rounded-lg flex items-center justify-center mr-3 ">
                 <div className="flex items-center space-x-1 ">
                   <div className="flex items-center">
-                    <ChevronLeft
-                      className="text-blue-700 w-6 h-8"
-                      strokeWidth={3}
-                    />
-                    <Slash className="text-blue-700 w-6 h-8" strokeWidth={3} />
-                    <ChevronRight
-                      className="text-blue-700 w-6 h-8"
-                      strokeWidth={3}
+                    <img
+                      src={Image}
+                      alt="Logo"
+                      className="w-12 h-12"
+                      style={{ filter: "brightness(0.8)" }}
                     />
                   </div>
                 </div>
