@@ -1,11 +1,7 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { ChevronLeft } from "lucide-react";
-import { Slash } from "lucide-react";
-import { ChevronRight } from "lucide-react";
-import Image from "../../../assets/image/logo.png";
-
+import Logo from "../../../assets/image/logo.png"; // Adjust the path as necessary
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -135,10 +131,9 @@ const Header = () => {
                 <div className="flex items-center space-x-1 ">
                   <div className="flex items-center">
                     <img
-                      src={Image}
-                      alt="Logo"
-                      className="w-12 h-12"
-                      style={{ filter: "brightness(0.8)" }}
+                      src={Logo}
+                      alt="UpnextHub Logo"
+                      className="w-12 h-12 object-cover"
                     />
                   </div>
                 </div>
