@@ -62,7 +62,7 @@ const Home = () => {
             </p>
 
             <div className="flex gap-4 justify-center">
-              <Link to="/contact" aria-label="Contact UpNextHub">
+              <Link to="/contactpage" aria-label="Contact UpNextHub">
                 <button className="px-8 py-3 bg-white text-indigo-900 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
@@ -271,7 +271,7 @@ const Home = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" aria-label="Contact UpNextHub">
+                <Link to="/contactpage" aria-label="Contact UpNextHub">
                   <button className="px-8 py-4 bg-white text-purple-600 rounded-full font-bold hover:bg-gray-100 transition-all duration-300">
                     Get Started Free
                   </button>
