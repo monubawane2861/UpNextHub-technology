@@ -558,7 +558,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        {/* teaam section */}
+
         {/* Team Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
@@ -596,7 +596,7 @@ const About = () => {
                       boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.1)",
                     }}
                   >
-                    <div className="h-64 bg-gray-200 relative overflow-hidden">
+                    <div className="h-80 bg-gray-200 relative overflow-hidden">
                       <img
                         src={member.image}
                         alt={member.name}
