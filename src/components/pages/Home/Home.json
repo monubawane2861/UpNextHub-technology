@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "description": "UpNextHub offers professional web development, mobile apps, and digital marketing services to transform your business.",
+    "keywords": "web development, mobile apps, digital marketing, SEO, social media marketing",
+    "ogTitle": "UpNextHub Technology | Digital Solutions Provider",
+    "ogDescription": "Professional digital solutions including web development, mobile apps, and marketing services."
+  },
+  "hero": {
+    "title": "Welcome to Upnexthub Technology",
+    "highlight": "Upnexthub Technology",
+    "subtitle": "Professional web and mobile app development services with comprehensive digital marketing solutions",
+    "backgroundImage": "https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&w=2070&auto=format&fit=crop"
+  },
+  "features": [
+    {
+      "title": "Web Development",
+      "description": "Custom websites and web applications built with modern technologies",
+      "icon": "🌐"
+    },
+    {
+      "title": "Mobile Applications",
+      "description": "iOS and Android apps to engage your customers on any device",
+      "icon": "📱"
+    },
+    {
+      "title": "Digital Marketing",
+      "description": "Strategies to increase your online visibility and conversions",
+      "icon": "📈"
+    },
+    {
+      "title": "SEO Services",
+      "description": "Optimize your website to rank higher on search engines",
+      "icon": "🔍"
+    },
+    {
+      "title": "Social Media Marketing",
+      "description": "Professional management of your social media presence",
+      "icon": "💬"
+    },
+    {
+      "title": "Cloud Solutions",
+      "description": "Secure and scalable hosting for your digital assets",
+      "icon": "☁️"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Paras Factor",
+      "quote": "UpNextHub transformed our online presence with a modern, responsive website that increased our leads by 150%.",
+      "role": "CEO, Factor Enterprises"
+    },
+    {
+      "name": "Mayuri Mehta",
+      "quote": "Their SEO strategy took us from page 3 to the top of Google search results in just 3 months.",
+      "role": "Marketing Director, Mehta Solutions"
+    },
+    {
+      "name": "Aishwarya Suryawanshi",
+      "quote": "The mobile app they developed has increased our customer engagement by 200% year-over-year.",
+      "role": "Product Manager, Surya Tech"
+    }
+  ],
+  "stats": [
+    { "number": "70+", "label": "Projects Completed" },
+    { "number": "95%", "label": "Client Retention" },
+    { "number": "24/7", "label": "Support Available" },
+    { "number": "50+", "label": "Satisfied Clients" }
+  ],
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Get started with our professional digital solutions today",
+    "button1": "Get Started Free",
+    "button2": "Schedule Demo"
+  }
+}
