@@ -30,7 +30,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Monali Bawane",
-    role: "CO founder, UI/UX Designer, Developer",
+    role: "CO founder, Developer",
     bio: "UI/UX specialist focused on creating intuitive user experiences",
     image: Image3, // Directly use the imported image
     social: {
