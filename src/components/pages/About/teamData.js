@@ -6,7 +6,7 @@ const teamMembers = [
   {
     id: 1,
     name: "Akash Gaydhane",
-    role: "Founder & CEO ,Developer",
+    role: "CEO ,Developer",
     bio: "Tech visionary with a proven track record in web development and driving digital transformatio",
     image: Image1, // Directly use the imported image
     social: {
@@ -18,7 +18,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Tushar Maske ",
-    role: "CO Founder , Developer",
+    role: "sales executive , Developer",
     bio: "Full-stack expert specializing in scalable architecture and cloud solutions",
     image: Image2, // Directly use the imported image
     social: {
