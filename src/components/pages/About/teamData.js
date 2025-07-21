@@ -1,5 +1,5 @@
 import Image1 from "../../../assets/image/akash.jpg";
-import Image2 from "../../../assets/image/tushar.jpg";
+import Image2 from "../../../assets/image/user.png";
 import Image3 from "../../../assets/image/monaa.jpg";
 
 const teamMembers = [
@@ -17,18 +17,6 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Tushar Maske ",
-    role: "sales executive , Developer",
-    bio: "Full-stack expert specializing in scalable architecture and cloud solutions",
-    image: Image2, // Directly use the imported image
-    social: {
-      linkedin: "https://linkedin.com/in/priya-upnexthub",
-      github: "https://github.com/priya-upnexthub",
-    },
-    skills: ["Node.js", "AWS", "React"],
-  },
-  {
-    id: 3,
     name: "Monali Bawane",
     role: "CO founder, Developer",
     bio: "UI/UX specialist focused on creating intuitive user experiences",
@@ -38,6 +26,18 @@ const teamMembers = [
       dribbble: "https://dribbble.com/amit-upnexthub",
     },
     skills: ["UI/UX Design", "frontend development", "Figma"],
+  },
+  {
+    id: 3,
+    name: " shubham Patil",
+    role: "sales executive , Developer",
+    bio: "Full-stack expert specializing in scalable architecture and cloud solutions",
+    image: Image2, // Directly use the imported image
+    social: {
+      linkedin: "https://linkedin.com/in/priya-upnexthub",
+      github: "https://github.com/priya-upnexthub",
+    },
+    skills: ["Node.js", "AWS", "React"],
   },
 ];
 
